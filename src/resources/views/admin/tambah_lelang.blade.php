@@ -45,46 +45,41 @@
       <div class="box box-primary">
         <!-- /.box-header -->
         <!-- form start -->
-        <form role="form">
+        <form role="form" method="post" enctype="multipart/form-data" action="{{route('crud_lelang.store')}}">
+           {{ csrf_field() }}
           <div class="box-body">
             <div class="form-group">
               <label>Nama Lelang</label>
-              <input type="text" class="form-control" placeholder="Input Nama....">
+              <input type="text" name="namalelang" class="form-control" placeholder="Input Nama....">
             </div>
             <div class="form-group">
               <label>Jenis Penawaran</label>
-              <input type="text" class="form-control" placeholder="Input Nama....">
+              <select class="form-control">
+                <option name="jenistawar">Penawaran Terbuka</option>
+                <option name="jenistawar">Penawaran Tertutup</option>
+              </select>
             </div>
-            <div class="form-group">
-              <label>Penawaran Awal</label>
-              <input type="text" class="form-control" placeholder="Input Penawaran....">
-            </div>
-            <div class="form-group">
-              <label>Batas Penyetoran Uang Jaminan</label>
-              <input type="text" class="form-control" placeholder="Input Nama....">
-            </div>
+            <label>Batas Harga Maksimal</label>
+            <div class="input-group">
+              <span class="input-group-addon"><img src="../img/indonesia-rupiah-currency-symbol.svg" alt="logo-rupiah" width="15px" height="15px"></span>
+              <input type="text" nama="hargamaksimal" class="form-control">
+            </div><br>
             <div class="form-group">
               <label>Daftar Lelang</label>
-              <textarea class="textarea" placeholder="Input Daftar Lelang...." rezise="none" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+              <textarea class="textarea" name="daftarlelang" placeholder="Input Daftar Lelang...." rezise="none" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
             </div>
             <div class="form-group">
               <label>Penawaran Dibuka</label>
-              <input type="datetime-local" class="form-control">
+              <input type="datetime-local" name="tanggalbuka" class="form-control">
             </div>
             <div class="form-group">
               <label>Penawaran Ditutup</label>
-              <input type="datetime-local" class="form-control">
+              <input type="datetime-local" name="tanggaltutup" class="form-control">
             </div>
             <div class="form-group">
               <label for="exampleInputFile">File input</label>
-              <input type="file" id="exampleInputFile">
-              {{-- <p class="help-block">Example block-level help text here.</p> --}}
+              <input type="file" name="uploadfile" id="exampleInputFile">
             </div>
-            {{-- <div class="checkbox">
-              <label>
-                <input type="checkbox"> Check me out
-              </label>
-            </div> --}}
             <div class="box-footer">
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>

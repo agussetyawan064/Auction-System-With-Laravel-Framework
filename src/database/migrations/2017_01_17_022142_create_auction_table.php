@@ -14,9 +14,14 @@ class CreateAuctionTable extends Migration
     public function up()
     {
         Schema::create('auction', function (Blueprint $table) {
-            $table->increments('id_lelang');
-            $table->string('nama_lelang', 25);
-            $table->smallInteger('kontrak');
+            $table->increments('idlelang');
+            $table->string('namalelang', 25);
+            $table->enum('jenistawar',['terbuka', 'tertutup']);
+            $table->bigInteger('hargamaksimal');
+            $table->text('daftarlelang');
+            $table->dateTimeTz('tanggalbuka');
+            $table->dateTimeTz('tanggaltutup');
+            $table->string('uploadfile');
             $table->timestamps();
         });
     }

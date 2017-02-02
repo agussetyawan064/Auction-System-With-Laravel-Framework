@@ -14,8 +14,8 @@ class CreateSaveFileTable extends Migration
     public function up()
     {
         Schema::create('save_file', function (Blueprint $table) {
-            $table->increments('id_file');
-            $table->string('jenis_file', 30);
+            $table->increments('idfile');
+            $table->string('jenisfile', 30);
             $table->string('direktori', 30);
             $table->timestamps();
         });

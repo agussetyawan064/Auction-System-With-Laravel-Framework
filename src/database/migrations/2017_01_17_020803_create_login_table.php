@@ -13,13 +13,14 @@ class CreateLoginTable extends Migration
      */
     public function up()
     {
-        Schema::create('login', function (Blueprint $table) {
-            $table->increments('id_login');
-            $table->string('email', 30)->unique();
-            $table->string('password', 20);
-            $table->integer('kategori');
-            $table->smallInteger('status');
-            $table->timestamps('created_at');
+        Schema::create('users', function (Blueprint $table) {
+            $table->increments('idlogin');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->tinyInteger('verified')->default(0);
+            $table->string('email_token')->index()->nullable();
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
@@ -30,6 +31,6 @@ class CreateLoginTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('login');
+        Schema::dropIfExists('users');
     }
 }
