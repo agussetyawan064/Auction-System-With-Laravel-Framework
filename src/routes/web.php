@@ -17,9 +17,9 @@ Route::get('/beranda', function () {
 Route::post('/login', function () {
      return view('user/login_user');
 });
-Route::get('/buat_lelang', function () {
-     return view('admin/tambah_lelang');
-});
+// Route::get('/buat_lelang', function () {
+//      return view('admin/tambah_lelang');
+// });
 Route::post('/register', function () {
      return view('user/register');
 });

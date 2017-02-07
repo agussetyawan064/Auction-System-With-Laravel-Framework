@@ -46,36 +46,46 @@
         <!-- /.box-header -->
         <!-- form start -->
         <form role="form" method="post" enctype="multipart/form-data" action="{{route('crud_lelang.store')}}">
-           {{ csrf_field() }}
+          {{ csrf_field() }}
           <div class="box-body">
-            <div class="form-group">
-              <label>Nama Lelang</label>
-              <input type="text" name="namalelang" class="form-control" placeholder="Input Nama....">
+            <label>Nama Lelang</label>
+            <div class="form-group{{ $errors->has('namalelang') ? ' has-error' : '' }}">
+              <input type="text" name="namalelang" class="form-control" placeholder="Nama Lelang">
+              {!! $errors->first('namalelang', '<p class="help-block">:message</p>') !!}
             </div>
             <div class="form-group">
               <label>Jenis Penawaran</label>
-              <select class="form-control">
-                <option name="jenistawar">Penawaran Terbuka</option>
-                <option name="jenistawar">Penawaran Tertutup</option>
+              <select class="form-control" name="jenistawar">
+                <option name="terbuka" value="terbuka" class="form-control">Terbuka</option>
+                <option name="tertutup" value="tertutup" class="form-control">Tertutup</option>
               </select>
             </div>
+
             <label>Batas Harga Maksimal</label>
-            <div class="input-group">
-              <span class="input-group-addon"><img src="../img/indonesia-rupiah-currency-symbol.svg" alt="logo-rupiah" width="15px" height="15px"></span>
-              <input type="text" nama="hargamaksimal" class="form-control">
-            </div><br>
-            <div class="form-group">
-              <label>Daftar Lelang</label>
-              <textarea class="textarea" name="daftarlelang" placeholder="Input Daftar Lelang...." rezise="none" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+            <div class="form-group{{ $errors->has('hargamaksimal') ? ' has-error' : '' }}">
+              <input type="text" name="hargamaksimal" class="form-control" placeholder="Input Harga Maksimal">
+              {!! $errors->first('hargamaksimal', '<p class="help-block">:message</p>') !!}
             </div>
-            <div class="form-group">
-              <label>Penawaran Dibuka</label>
-              <input type="datetime-local" name="tanggalbuka" class="form-control">
+
+            <label>Daftar Lelang</label>
+            <div class="form-group{{ $errors->has('daftarlelang') ? ' has-error' : '' }}">
+              <textarea name="daftarlelang" class="form-control" placeholder="Input daftar barang yang akan dilelang " style="width: 100%; height: 200px; resize:none; font-size: 14px; line-height: 18px; padding: 10px;"></textarea>
+              {!! $errors->first('daftarlelang', '<p class="help-block">:message</p>') !!}
             </div>
-            <div class="form-group">
-              <label>Penawaran Ditutup</label>
-              <input type="datetime-local" name="tanggaltutup" class="form-control">
+            {{-- <textarea name="daftarlelang" placeholder="Input Daftar Lelang...." style="width: 100%; height: 200px; resize:none; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea> --}}
+
+            <label>Penawaran Dibuka</label>
+            <div class="form-group{{ $errors->has('tanggalbuka') ? ' has-error' : '' }}">
+              <input type="date" name="tanggalbuka" class="form-control">
+              {!! $errors->first('tanggalbuka', '<p class="help-block">:message</p>') !!}
             </div>
+
+            <label>Penawaran Ditutup</label>
+            <div class="form-group{{ $errors->has('tanggaltutup') ? ' has-error' : '' }}">
+              <input type="date" name="tanggaltutup" class="form-control">
+              {!! $errors->first('tanggaltutup', '<p class="help-block">:message</p>') !!}
+            </div>
+
             <div class="form-group">
               <label for="exampleInputFile">File input</label>
               <input type="file" name="uploadfile" id="exampleInputFile">

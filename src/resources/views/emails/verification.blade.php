@@ -107,7 +107,7 @@ $style = [
                                                             style="{{ $fontFamily }} {{ $style['button'] }} {{ $style[$actionColor] }}"
                                                             class="button"
                                                             target="_blank">
-                                                            Verify
+                                                            Konfirmasi Email
                                                         </a>
                                                     </td>
                                                 </tr>

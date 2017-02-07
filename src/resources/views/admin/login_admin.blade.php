@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html>
 <head>
   <meta charset="UTF-8">
   <title>Material Login Form</title>
@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
   <!-- Mixins-->
   <!-- Pen Title-->
   <div class="pen-title">
@@ -25,7 +24,7 @@
     <div class="card"></div>
     <div class="card">
       <h1 class="title">Login</h1>
-      <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+      <form class="form-horizontal" role="form" method="POST" action="{{ url('admin/login') }}">
         {{ csrf_field() }}
 
         <div class="input-container{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -66,63 +65,6 @@
     @if (Session::has('message'))
     <div class="alert alert-info">{{ Session::get('message') }}</div>
     @endif
-    <div class="card alt">
-      <div class="toggle" title="Daftar Akun"></div>
-      <h1 class="title">Register
-        <div class="close"></div>
-      </h1>
-      <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
-        {{ csrf_field() }}
-
-        <div class="input-container{{ $errors->has('email') ? ' has-error' : '' }}">
-          <label for="email"></label>
-
-          <div>
-            <input id="email" type="email" class="form-control" name="email" placeholder="Masukkan Alamat E-Mail" value="{{ old('email') }}" required>
-
-            @if ($errors->has('email'))
-              <span class="help-block">
-                <strong>{{ $errors->first('email') }}</strong>
-              </span>
-            @endif
-          </div>
-          <div class="bar"></div>
-        </div>
-
-        <div class="input-container{{ $errors->has('password') ? ' has-error' : '' }}">
-          <label for="password"></label>
-
-          <div>
-            <input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
-
-            @if ($errors->has('password'))
-              <span class="help-block">
-                <strong>{{ $errors->first('password') }}</strong>
-              </span>
-            @endif
-          </div>
-          <div class="bar"></div>
-        </div>
-
-        <div class="input-container{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-          <label for="password-confirm"></label>
-
-          <div>
-            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Konfirmasi Password" required>
-
-            @if ($errors->has('password_confirmation'))
-              <span class="help-block">
-                <strong>{{ $errors->first('password_confirmation') }}</strong>
-              </span>
-            @endif
-          </div>
-          <div class="bar"></div>
-        </div>
-        <div class="button-container">
-          <button><span>Daftar</span></button>
-        </div>
-      </form>
-    </div>
   </div>
   {{-- <!-- Portfolio--><a id="portfolio" href="http://andytran.me/" title="View my portfolio!"><i class="fa fa-link"></i></a>
   <!-- CodePen--><a id="codepen" href="http://codepen.io/andytran/" title="Follow me!"><i class="fa fa-codepen"></i></a> --}}

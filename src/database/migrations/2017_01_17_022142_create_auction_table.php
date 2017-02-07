@@ -19,8 +19,8 @@ class CreateAuctionTable extends Migration
             $table->enum('jenistawar',['terbuka', 'tertutup']);
             $table->bigInteger('hargamaksimal');
             $table->text('daftarlelang');
-            $table->dateTimeTz('tanggalbuka');
-            $table->dateTimeTz('tanggaltutup');
+            $table->date('tanggalbuka');
+            $table->date('tanggaltutup');
             $table->string('uploadfile');
             $table->timestamps();
         });

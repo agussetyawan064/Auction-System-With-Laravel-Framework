@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Crud;
+namespace App\Http\Requests\Lelang;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -24,12 +24,13 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-          'namalelang' => 'Required',
-          'jenistawar' => 'Required',
-          'daftarlelang' => 'Required',
-          'tanggalbuka' => 'Required',
-          'tanggaltutup' => 'Required',
-          'uploadfile' => 'Required'
+          'namalelang' => 'required',
+          'jenistawar' => 'required',
+          'daftarlelang' => 'required',
+          'hargamaksimal' => 'required',
+          'tanggalbuka' => 'required',
+          'tanggaltutup' => 'required',
+          'uploadfile' => 'required|file|mimes:jpeg,png,jpg,gif,svg,pdf|max:2048',
         ];
     }
 
@@ -37,11 +38,12 @@ class StoreRequest extends FormRequest
     {
         return [
             'namalelang.required' => 'Nama Tidak Boleh Kosong.',
-            'jenistawar.required' => 'Nomor Handphone Tidak Boleh Kosong.'
+            'jenistawar.required' => 'Nomor Handphone Tidak Boleh Kosong.',
             'daftarlelang.required' => 'Nama Tidak Boleh Kosong.',
-            'tanggalbuka.required' => 'Nomor Handphone Tidak Boleh Kosong.'
+            'hargamaksimal.required' => "Harga Tidak Boleh Kosong",
+            'tanggalbuka.required' => 'Nomor Handphone Tidak Boleh Kosong.',
             'tanggaltutup.required' => 'Nama Tidak Boleh Kosong.',
-            'uploadfile.required' => 'Nomor Handphone Tidak Boleh Kosong.'
+            'uploadfile.required' => "File tidak boleh kosong",
         ];
     }
 }

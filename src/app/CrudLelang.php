@@ -8,6 +8,10 @@ class CrudLelang extends Model
 {
     protected $table = 'auction';
     protected $primaryKey='idlelang';
-    //protected $fillable = ['nama_perusahaan', 'alamat_perusahaan', 'kota_perusahaan', 'npwp', 'no_telepon'];
+
+    protected $fillable = [
+      'namalelang', 'jenistawar', 'hargamaksimal', 'daftarlelang', 'tanggalbuka', 'tanggaltutup', 'uploadfile',
+    ];
+
     public $timestamps = false;
 }
