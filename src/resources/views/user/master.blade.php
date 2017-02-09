@@ -32,7 +32,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body class="hold-transition skin-green-light sidebar-mini">
+<body class="hold-transition skin-blue-light sidebar-mini">
   <div class="wrapper">
 
     <!-- Main Header -->

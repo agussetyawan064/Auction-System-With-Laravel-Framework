@@ -1,5 +1,5 @@
 @extends('user.master')
-@section('title', "Beranda")
+@section('title', "Beranda Lelang")
   @section('side_bar')
     <div class="user-panel">
       <div class="pull-left image">
@@ -60,3 +60,54 @@
       <li><a href="{{url('/about')}}"><img src="img/info.svg" width="20px" height="20px"> <span>Tentang</span></a></li>
     </ul>
   @stop
+  @section('content')
+    @foreach($cruds as $crud)
+    <div class="col-md-6">
+      <!-- Box Comment -->
+      <div class="box box-widget">
+        <div class="box-header with-border">
+          <div class="user-block">
+            <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Image">
+            <span class="username"><a href="#">{{$crud->namalelang}}</a></span>
+            <span class="description">Shared publicly - 7:30 PM Today</span>
+          </div>
+          <!-- /.user-block -->
+          <div class="box-tools">
+            <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Mark as read">
+              <i class="fa fa-circle-o"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+          </div>
+          <!-- /.box-tools -->
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <table class="table">
+            <tr>
+              <th>Jenis Penawaran</th>
+              	<td>{{$crud->jenistawar}}</td>
+            </tr>
+            <tr>
+              <th>Harga Maksimal</th>
+              	<td>{{$crud->hargamaksimal}}</td>
+            </tr>
+            <tr>
+              <th>Daftar Lelang</th>
+              	<td><textarea style="resize:none; width:400px; height:200px;" readonly="readonly">{{$crud->daftarlelang}}</textarea></td>
+            </tr>
+            <tr>
+              <th>Penawaran Ditutup</th>
+              	<td>{{$crud->tanggaltutup}}</td>
+            </tr>
+            {{-- <tr>
+              <th>Document Lelang Offline</th>
+            </tr> --}}
+          </table>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+      </div>
+    @endforeach
+  @endsection

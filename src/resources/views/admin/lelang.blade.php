@@ -67,12 +67,12 @@
               <td>{{$crud->tanggaltutup}}</td>
 							<td>{{$crud->uploadfile}}</td>
 							<td>
-								{{-- <form method="POST" action="{{ route('crud.destroy', $crud->id) }}" accept-charset="UTF-8">
+								<form method="POST" action="{{ route('crud_lelang.destroy', $crud->idlelang) }}" accept-charset="UTF-8">
 		                            <input name="_method" type="hidden" value="DELETE">
 		                            <input name="_token" type="hidden" value="{{ csrf_token() }}">
-		                            <a href="{{route('crud.edit', $crud->id)}}" class="btn btn-primary">Edit</a>
+		                            <a href="{{route('crud_lelang.edit', $crud->idlelang)}}" class="btn btn-primary">Edit</a>
 		                        	<input type="submit" class="btn btn-danger" onclick="return confirm('Anda yakin akan menghapus data ?');" value="Delete">
-		                        </form> --}}
+		                        </form>
 							</td>
 						</tr>
 						@endforeach

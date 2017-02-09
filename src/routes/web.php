@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/beranda', function () {
-     return view('user/list_auction');
-});
+Route::get('/beranda_lelang', 'ShowLelang@index');
 Route::post('/login', function () {
      return view('user/login_user');
 });
@@ -47,11 +45,11 @@ Route::get('/change_protected', function () {
 Route::get('/my_auction', function () {
      return view('user/my_auction');
 });
-Route::get('/list_auction', function () {
-     return view('user/list_auction');
-});
+// Route::get('/list_auction', function () {
+//      return view('user/list_auction');
+// });
 // Route::get('/members', 'DataAdmin@tampilData');
-// Route::get('/user_members', 'DataUser@tampilData');
+Route::get('/user_members', 'DataUser@tampilData');
 // Route::get('/show_comment', 'Komentar@tampilData');
 
 // Route::get('/create', function(){
