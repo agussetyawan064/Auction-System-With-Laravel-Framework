@@ -100,9 +100,14 @@
               <th>Penawaran Ditutup</th>
               	<td>{{$crud->tanggaltutup}}</td>
             </tr>
-            {{-- <tr>
+            <tr>
+              <th>Kode Lelang</th>
+              <td>Link</td>
+            </tr>
+            <tr>
               <th>Document Lelang Offline</th>
-            </tr> --}}
+              <td>Link</td>
+            </tr>
           </table>
         </div>
         <!-- /.box-body -->
