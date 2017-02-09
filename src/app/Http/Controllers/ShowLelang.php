@@ -13,4 +13,5 @@ class ShowLelang extends Controller
     $cruds = CrudLelang::all();
     return view('user/list_auction', compact('cruds'));
   }
+  
 }
