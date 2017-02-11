@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,6 +32,9 @@
 
 @section('content')
  <div class="container">
+=======
+<div class="container">
+>>>>>>> 9d472ff7e0b369163f558e1f9a5af7ad02d39613
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -71,7 +75,11 @@
                             <div class="col-md-6 col-md-offset-4">
                                 <div class="checkbox">
                                     <label>
+<<<<<<< HEAD
                                         <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : ''}}> Remember Me
+=======
+                                        <input type="checkbox" name="remember"> Remember Me
+>>>>>>> 9d472ff7e0b369163f558e1f9a5af7ad02d39613
                                     </label>
                                 </div>
                             </div>
@@ -95,6 +103,7 @@
     </div>
 </div>
 @endsection
+<<<<<<< HEAD
 <!-- /.login-box -->
 
 <!-- jQuery 2.2.3 -->
@@ -114,3 +123,5 @@
 </script>
 </body>
 </html>
+=======
+>>>>>>> 9d472ff7e0b369163f558e1f9a5af7ad02d39613

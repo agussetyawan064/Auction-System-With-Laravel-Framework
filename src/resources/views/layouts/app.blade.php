@@ -55,7 +55,11 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+<<<<<<< HEAD
                                     {{ Auth::user()->email }} <span class="caret"></span>
+=======
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+>>>>>>> 9d472ff7e0b369163f558e1f9a5af7ad02d39613
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">

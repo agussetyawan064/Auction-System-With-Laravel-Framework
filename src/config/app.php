@@ -140,7 +140,10 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+<<<<<<< HEAD
         Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
+=======
+>>>>>>> 9d472ff7e0b369163f558e1f9a5af7ad02d39613
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -209,8 +212,11 @@ return [
         'File' => Illuminate\Support\Facades\File::class,
         'Gate' => Illuminate\Support\Facades\Gate::class,
         'Hash' => Illuminate\Support\Facades\Hash::class,
+<<<<<<< HEAD
          'Input'     => Illuminate\Support\Facades\Input::class,
         'Inspiring' => Illuminate\Foundation\Inspiring::class,
+=======
+>>>>>>> 9d472ff7e0b369163f558e1f9a5af7ad02d39613
         'Lang' => Illuminate\Support\Facades\Lang::class,
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,

@@ -6,14 +6,22 @@
       <img src="img/avatar5.png" class="img-circle" alt="User Image">
     </div>
     <div class="pull-left info">
+<<<<<<< HEAD
       <p>AGUS SETYAWAN</p>
+=======
+      <p>LENDIS FABRI D.N</p>
+>>>>>>> 9d472ff7e0b369163f558e1f9a5af7ad02d39613
       <!-- Status -->
       <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
     </div>
   </div>
   <!-- Sidebar Menu -->
   <ul class="sidebar-menu">
+<<<<<<< HEAD
     <li class="active"><a href="{{url('/beranda_lelang')}}"><img src="img/auction.svg" width="20px" height="20px"> <span>Beranda Lelang</span></a></li>
+=======
+    <li class="active"><a href="{{url('/show_admin')}}"><img src="img/auction.svg" width="20px" height="20px"> <span>Beranda Lelang</span></a></li>
+>>>>>>> 9d472ff7e0b369163f558e1f9a5af7ad02d39613
     <li class="treeview">
       <a href="#"><img src="img/profil.svg" width="20px" height="20px"> <span>Profil</span>
         <span class="pull-right-container">
@@ -22,7 +30,11 @@
       </a>
       <ul class="treeview-menu">
         <li><a href="#"><img src="img/user-setting.svg" width="20px" height="20px"> <span>Edit Akun</span></a></li>
+<<<<<<< HEAD
        <!--  <li><a href="#"><img src="img/key.svg" width="20px" height="20px"> <span>Ganti Password dan E-mail</span></a></li> -->
+=======
+        <li><a href="#"><img src="img/key.svg" width="20px" height="20px"> <span>Ganti Password dan E-mail</span></a></li>
+>>>>>>> 9d472ff7e0b369163f558e1f9a5af7ad02d39613
       </ul>
     </li>
     <li class="treeview">

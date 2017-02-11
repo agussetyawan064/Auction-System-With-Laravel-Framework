@@ -7,6 +7,7 @@
       </div>
       <div class="pull-left info">
         <p>AGUS SETYAWAN</p>
+        <p>LENDIS FABRI D.N</p>
         <!-- Status -->
         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
       </div>
@@ -24,6 +25,16 @@
         <!-- <ul class="treeview-menu">
           <li><a href="{{url('/change_protected')}}"><img src="img/key.svg" width="20px" height="20px"> <span>Ganti Password dan E-mail</span></a></li>
         </ul> -->
+      <li class="active"><a href="{{url('/list_auction')}}"><img src="img/auction.svg" width="20px" height="20px"> <span>Beranda Lelang</span></a></li>
+      <li class="treeview">
+        <a href="{{url('/profil_user')}}"><img src="img/profil.svg" width="20px" height="20px"> <span>Profil Perusahaan</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="{{url('/change_protected')}}"><img src="img/key.svg" width="20px" height="20px"> <span>Ganti Password dan E-mail</span></a></li>
+        </ul>
       </li>
       {{-- <li class="treeview">
         <a href="{{url('/syarat')}}"><img src="img/deal.svg" width="20px" height="20px"> <span>Syarat Lelang</span>
@@ -73,6 +84,7 @@
         <div class="box-header with-border">
           <div class="user-block">
             <img class="img-circle" src="/img/avatar5.png" alt="User Image">
+            <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Image">
             <span class="username"><a href="{{url('user/detail_lelang')}}">{{$crud->namalelang}}</a></span>
             <span class="description">Shared publicly - 7:30 PM Today</span>
           </div>
@@ -105,6 +117,19 @@
             <tr>
               <th>Penawaran Ditutup</th>
                 <td>{{$crud->tanggaltutup}}</td>
+              	<td>{{$crud->jenistawar}}</td>
+            </tr>
+            <tr>
+              <th>Harga Maksimal</th>
+              	<td>{{$crud->hargamaksimal}}</td>
+            </tr>
+            <tr>
+              <th>Daftar Lelang</th>
+              	<td><textarea style="resize:none; width:400px; height:200px;" readonly="readonly">{{$crud->daftarlelang}}</textarea></td>
+            </tr>
+            <tr>
+              <th>Penawaran Ditutup</th>
+              	<td>{{$crud->tanggaltutup}}</td>
             </tr>
             <tr>
               <th>Kode Lelang</th>
@@ -114,9 +139,9 @@
               <th>Document Lelang Offline</th>
               <td>Link</td>
             </tr>
-
           </table>
           <button class="btn btn-primary " style=" text-align: right;" >Ikuti Lelang</button>
+          </table>
         </div>
         <!-- /.box-body -->
       </div>
@@ -128,3 +153,6 @@
   </div>
 @endsection
 
+    @endforeach
+  </div>
+@endsection

@@ -12,6 +12,4 @@ class CrudLelang extends Model
     protected $fillable = [
       'namalelang', 'jenistawar', 'hargamaksimal', 'daftarlelang', 'tanggalbuka', 'tanggaltutup', 'uploadfile',
     ];
-
-    public $timestamps = true;
 }

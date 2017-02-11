@@ -24,6 +24,15 @@ Route::get('/beranda', function () {
 //Route::post('/register', function () {
   //   return view('user/register');
 //});
+Route::post('/login', function () {
+     return view('user/login_user');
+});
+// Route::get('/buat_lelang', function () {
+//      return view('admin/tambah_lelang');
+// });
+Route::post('/register', function () {
+     return view('user/register');
+});
 Route::get('/profil_user', function () {
      return view('user/profil');
 });
@@ -48,6 +57,7 @@ Route::get('/change_protected', function () {
 Route::get('/my_auction', function () {
      return view('user/my_auction');
 });
+<<<<<<< HEAD
 
 
 //Admin
@@ -64,6 +74,14 @@ Route::post('/admin/crud/destroy', 'DataAdmin@destroy');
  //Route::get('/user_members', 'DataUser@tampilData');
 //Route::get('/admin/user_members', 'ProsesCrud@index');
 Route::get('/admin/show_comment', 'Komentar@tampilData');
+=======
+// Route::get('/list_auction', function () {
+//      return view('user/list_auction');
+// });
+// Route::get('/members', 'DataAdmin@tampilData');
+Route::get('/user_members', 'DataUser@tampilData');
+// Route::get('/show_comment', 'Komentar@tampilData');
+>>>>>>> 9d472ff7e0b369163f558e1f9a5af7ad02d39613
 
 // Route::get('/create', function(){
 // 	return view('admin/create');
@@ -72,6 +90,7 @@ Route::get('/admin/show_comment', 'Komentar@tampilData');
 // 	return view('admin/update');
 // });
 // Route::get('/', function(){
+<<<<<<< HEAD
 // 	return redirect()->to('/login');
 // });
 // Route::resource('crud', 'ProsesCrud');
@@ -122,3 +141,16 @@ Route::get('/admin', function(){
 
 });
 
+// 	return redirect()->to('/crud');
+// });
+// Route::resource('crud', 'ProsesCrud');
+Route::get('/crud', 'ProsesCrud@index');
+Route::post('/crud/store', 'ProsesCrud@store');
+Route::post('/crud/update', 'ProsesCrud@update');
+Route::post('/crud/destroy', 'ProsesCrud@destroy');
+Route::resource('crud_lelang', 'UploadLelang');
+//
+Auth::routes();
+
+Route::post('register/verify/{token}','Auth\RegisterController@verify');
+Route::get('/home', 'HomeController@index');

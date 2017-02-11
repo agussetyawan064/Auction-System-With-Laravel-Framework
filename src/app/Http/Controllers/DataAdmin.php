@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 // namespace App\Http\Controllers;
 
 // use Illuminate\Http\Request;
@@ -137,3 +138,18 @@ class DataAdmin extends Controller
     }
 }
 
+=======
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use App\Http\Requests;
+use DB;
+class DataAdmin extends Controller
+{
+  public function tampilData(){
+    $data = DB::select('SELECT * FROM admin');
+    return view('admin/members',['data'=>$data]);
+ }
+}
+>>>>>>> 9d472ff7e0b369163f558e1f9a5af7ad02d39613

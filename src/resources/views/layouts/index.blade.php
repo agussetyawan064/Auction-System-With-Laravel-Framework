@@ -5,7 +5,11 @@
       <img src="../img/avatar5.png" class="../img-circle" alt="User Image">
     </div>
     <div class="pull-left info">
+<<<<<<< HEAD
       <p>AGUS SETYAWAN</p>
+=======
+      <p>LENDIS FABRI D.N</p>
+>>>>>>> 9d472ff7e0b369163f558e1f9a5af7ad02d39613
       <!-- Status -->
       <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
     </div>

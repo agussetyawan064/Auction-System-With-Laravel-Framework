@@ -14,6 +14,7 @@
 
   <!-- Sidebar Menu -->
   <ul class="sidebar-menu">
+<<<<<<< HEAD
     <li class="active"><a href="{{url('/beranda_lelang')}}"><img src="img/auction.svg" width="20px" height="20px"> <span>Beranda Lelang</span></a></li>
     <li class="treeview">
       <a href="{{url('/profil_user')}}"><img src="img/profil.svg" width="20px" height="20px"> <span>Profil Perusahaan</span>
@@ -24,6 +25,18 @@
       <!-- <ul class="treeview-menu">
         <li><a href="{{url('/change_protected')}}"><img src="img/key.svg" width="20px" height="20px"> <span>Ganti Password dan E-mail</span></a></li>
       </ul> -->
+=======
+    <li class="active"><a href="{{url('/list_auction')}}"><img src="img/auction.svg" width="20px" height="20px"> <span>Beranda Lelang</span></a></li>
+    <li class="treeview">
+      <a href="{{url('/profil_user')}}"><img src="img/profil.svg" width="20px" height="20px"> <span>Profil Perusahaan</span>
+        <span class="pull-right-container">
+          <i class="fa fa-angle-left pull-right"></i>
+        </span>
+      </a>
+      <ul class="treeview-menu">
+        <li><a href="{{url('/change_protected')}}"><img src="img/key.svg" width="20px" height="20px"> <span>Ganti Password dan E-mail</span></a></li>
+      </ul>
+>>>>>>> 9d472ff7e0b369163f558e1f9a5af7ad02d39613
     </li>
     {{-- <li class="treeview">
       <a href="{{url('/syarat')}}"><img src="img/deal.svg" width="20px" height="20px"> <span>Syarat Lelang</span>

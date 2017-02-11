@@ -14,6 +14,7 @@
 <!-- Sidebar Menu -->
 <ul class="sidebar-menu">
 	<!-- Optionally, you can add icons to the links -->
+<<<<<<< HEAD
 	<li><a href="{{url('/admin/members')}}"><img src="../img/user.svg" width="20px" height="20px"> <span>Data Admin</span></a></li>
 </ul>
 <ul class="sidebar-menu">
@@ -31,6 +32,25 @@
 <ul class="sidebar-menu">
 	<!-- Optionally, you can add icons to the links -->
 	<li><a href="{{url('/admin/show_comment')}}"><img src="../img/chat.svg" width="20px" height="20px"> <span>Komentar User</span></a></li>
+=======
+	<li><a href="{{url('/members')}}"><img src="../img/user.svg" width="20px" height="20px"> <span>Data Admin</span></a></li>
+</ul>
+<ul class="sidebar-menu">
+	<!-- Optionally, you can add icons to the links -->
+	<li><a href="{{url('/user_members')}}"><img src="../img/users.svg" width="20px" height="20px"> <span>Data User</span></a></li>
+</ul>
+<ul class="sidebar-menu">
+	<!-- Optionally, you can add icons to the links -->
+	<li><a href="{{url('/list_auction')}}"><img src="../img/auction.svg" width="20px" height="20px"> <span>Daftar Lelang</span></a></li>
+</ul>
+<ul class="sidebar-menu">
+	<!-- Optionally, you can add icons to the links -->
+	<li><a href="{{url('/user_members')}}"><img src="../img/outbox.svg" width="20px" height="20px"> <span>File Upload</span></a></li>
+</ul>
+<ul class="sidebar-menu">
+	<!-- Optionally, you can add icons to the links -->
+	<li><a href="{{url('/show_comment')}}"><img src="../img/chat.svg" width="20px" height="20px"> <span>Komentar User</span></a></li>
+>>>>>>> 9d472ff7e0b369163f558e1f9a5af7ad02d39613
 </ul>
 @endsection
 

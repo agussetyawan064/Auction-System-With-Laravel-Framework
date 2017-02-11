@@ -11,5 +11,4 @@ class Crud extends Model
     protected $fillable = [
       'namaperusahaan', 'alamatperusahaan', 'kotaperusahaan', 'npwp', 'notelepon',
     ];
-    public $timestamps = true;
 }

@@ -28,8 +28,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   @yield('custom_css')
 
+<<<<<<< HEAD
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+=======
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -56,6 +60,7 @@ desired effect
 |---------------------------------------------------------|
 -->
 <body class="hold-transition skin-blue-light sidebar-mini">
+<body class="hold-transition skin-green-light sidebar-mini">
   <div class="wrapper">
     <!-- Main Header -->
     <header class="main-header">
@@ -251,6 +256,84 @@ desired effect
 
     <!-- /.content -->
   </div>
+            <!-- User Account Menu -->
+            <li class="dropdown user user-menu">
+              <!-- Menu Toggle Button -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <!-- The user image in the navbar-->
+                <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                <span class="hidden-xs">Alexander Pierce</span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- The user image in the menu -->
+                <li class="user-header">
+                  <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                  <p>
+                    Alexander Pierce - Web Developer
+                    <small>Member since Nov. 2012</small>
+                  </p>
+                </li>
+                <!-- Menu Body -->
+                <li class="user-body">
+                  <div class="row">
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Followers</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Sales</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Friends</a>
+                    </div>
+                  </div>
+                  <!-- /.row -->
+                </li>
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <!-- Control Sidebar Toggle Button -->
+            <li>
+              <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+
+        <!-- Sidebar user panel (optional) -->
+        @yield('side_bar')
+        <!-- /.sidebar-menu -->
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      @yield('content-header')
+
+      <!-- Main content -->
+      <section class="content">
+        @yield('content')
+      </section>
+
+    <!-- /.content -->
+    </div>
   <!-- /.content-wrapper -->
 
   <!-- Main Footer -->

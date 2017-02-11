@@ -14,17 +14,11 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-         'email', 'password',
-    ];
-    protected $primaryKey='idlogin';
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    public function verified()
+    {
+        $this->verified = 1;
+        $this->email_token = null;
+        $this->save();
+    }
 }
